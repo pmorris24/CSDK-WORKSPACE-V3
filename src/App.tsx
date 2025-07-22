@@ -109,12 +109,14 @@ const darkTheme = {
 };
 
 const getStyleOptions = (themeMode: 'light' | 'dark'): DashboardWidgetStyleOptions => {
+    const headerBackgroundColor = themeMode === 'dark' ? '#1F2838' : '#FFFFFF';
+
     return {
-        backgroundColor: 'transparent',
+        backgroundColor: headerBackgroundColor,
         border: false,
         shadow: 'None',
         header: {
-            backgroundColor: 'transparent',
+            backgroundColor: headerBackgroundColor,
             titleTextColor: themeMode === 'dark' ? '#FFFFFF' : '#111827',
             dividerLine: true,
             dividerLineColor: themeMode === 'dark' ? 'transparent' : '#E5E7EB',
